@@ -1,4 +1,4 @@
-# Portfolio Website
+# My Personal Portfolio Website😋
 
 This is my beginner portfolio website built using **HTML & CSS only**.
 
@@ -12,7 +12,7 @@ This is my beginner portfolio website built using **HTML & CSS only**.
 
 ---
 
-## Note from me 😋
+## Note from me 😔🙏🏻
 
 I’ve tried my best to make the site responsive across different devices.  
 I'm still learning web development, so please don’t mind any mistakes.  
