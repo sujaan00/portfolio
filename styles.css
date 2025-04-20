@@ -1,0 +1,343 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+body{
+    background-color: #4A7EA7;
+    overflow: hidden;
+
+}
+.greeting {
+    font-size: 34px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+.images{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 2%;
+    top: 20%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.me img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.coding p{
+    color: white;
+    font-family: cursive;
+    font-size: 14px;
+    position: absolute;
+    top: 40%;
+    left: 32.5%;
+}
+
+.coding img{
+    height: 150px;
+    top: 22%;
+    position: absolute;
+    left: 34%;
+}
+
+.camera p{
+    color: white;
+    font-family: cursive;
+    font-size: 15px;
+    position: absolute;
+    top: 40%;
+    left: 67.6%;
+}
+
+.camera img{
+    height: 150px;
+    top: 22%;
+    position: absolute;
+    left: 70%;
+    display: flex;
+}
+
+/* Common hover effect for all three images */
+.camera img:hover,
+.coding img:hover,
+.me img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+/* Optional: reset transition when not hovered */
+.camera img,
+.coding img,
+.me img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 40px;
+}
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.social-links p{
+    color: white;
+    font-size: 15px;
+}
+
+.social-links img:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+.link-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.link-container img {
+    width: 120px;
+    height: 120px;
+    margin-top: -27px;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 100;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    margin: 10% auto;
+    padding: 30px;
+    background: 	#141F2B;
+    border-radius: 30px;
+    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* Internet Explorer & Edge */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari */
+    visibility: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 10px; right: 20px;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.close:hover {
+    color: black;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;               /* Wrap images to next line */
+    gap: 50px;
+    max-height: 100%;
+    overflow-y: auto;              /* Scroll vertically */
+    justify-content: center;
+}
+
+.photos img {
+    width: calc(25% - 10px);       /* Roughly 5 images per row */
+    height: auto;
+    border-radius: 40px;
+}
+
+.link-container img:hover {
+    transform: scale(1.1);
+}
+
+.headshot img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.headshot img:hover {
+    transform: scale(1.2);
+}
+
+.aboutme p{
+    color: white;
+}
+
+.photos img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.projects {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+}
+.projects > div {
+    flex: 0 0 auto;
+    background-color: #1e2b38;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    width: 300px;
+    scroll-snap-align: start;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.projects > div:hover {
+    transform: scale(1.05);
+}
+.projects img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.projects h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+.projects p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+h2{
+    color: white;
+}
+
+
+/* For devices smaller than 768px (e.g., mobile phones) */
+@media (max-width: 500px) {
+    body {
+        font-size: 14px; /* Adjust text size for mobile */
+        overflow: auto;
+    }
+
+    .welcome img{
+        width: auto;
+        height: 200px;
+        position: absolute;
+    }
+
+    .greeting{
+        font-size: 10px;
+    }
+
+    .welcome{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 2%;
+        top: 20%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .me img{
+        height: 280px;
+        width:  110px;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+    }
+
+    .coding img{
+        position: absolute;
+        top: 5%;
+        height: 300px;
+        width: 150px;
+    }
+
+    .camera img{
+        position: absolute;
+        top: 5%;
+        height: 300px;
+        width: 150px;
+    }
+
+    .some-element {
+        width: 100%; /* Ensure elements are responsive */
+    }
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 38%; /* or try 10%, or whatever looks good visually */
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .social-links img{
+        height: 70px;
+        width:  70px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
