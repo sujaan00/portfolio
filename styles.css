@@ -309,14 +309,16 @@ h2{
     .coding img{
         position: absolute;
         top: 5%;
-        height: 300px;
+        left: 40%;
+        height: 120px;
         width: 150px;
     }
 
     .camera img{
         position: absolute;
-        top: 5%;
-        height: 300px;
+        top: 20%;
+        left: 40%;
+        height: 120px;
         width: 150px;
     }
 
@@ -339,5 +341,8 @@ h2{
         width:  70px;
         display: flex;
         flex-wrap: wrap;
+    }
+    .coding p, .camera p{
+        visibility: hidden;
     }
 }
